@@ -6,6 +6,7 @@ import { useAppDispatch } from "../../redux/store";
 import style from './ProductCard.module.scss';
 import { GrCart } from "react-icons/gr";
 import { formatterRub } from "../../utils/numberFormatter";
+import {RoutePath} from "../../config/router/routerConfig";
 
 interface PizzaBlockProps {
     id: string;
@@ -39,7 +40,7 @@ export const WatchBlock: FC<PizzaBlockProps> = ({
     return (
         <div className={style.productCard}>
             <div className={style.productCard__image}>
-                <Link to={`/watch/${id}`} className={style.productCard__more}>Подробнее</Link>
+                <Link to={`${RoutePath.full_watch}/${id}`} className={style.productCard__more}>Подробнее</Link>
 
                 <img src={imageUrl} alt="asdasd"/>
             </div>

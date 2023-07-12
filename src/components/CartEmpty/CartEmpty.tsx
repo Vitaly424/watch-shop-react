@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import cartEmptyImg from '../../assets/img/empty-cart.png';
 import { FC } from "react";
+import {RoutePath} from "../../config/router/routerConfig";
 
 export const CartEmpty: FC = () => (
     <div className="cart cart--empty">
@@ -12,7 +13,7 @@ export const CartEmpty: FC = () => (
             <br />
             Для того, чтобы заказать часы, перейди на главную страницу.
         </p>
-        <Link to="/" className="button button--black">
+        <Link to={RoutePath.main} className="button button--black">
             <span>Вернуться назад</span>
         </Link>
     </div>

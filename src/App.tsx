@@ -23,8 +23,7 @@ function App() {
                   <Suspense fallback={<h2>Загрузка...</h2>}>
                     <Cart />
                   </Suspense>
-                }
-                />
+                } />
                 <Route path="/watch/:id" element={
                   <Suspense fallback={<h2>Загрузка...</h2>}>
                     <FullWatch />

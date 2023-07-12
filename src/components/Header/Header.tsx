@@ -6,6 +6,7 @@ import { selectCart } from '../../redux/slices/cartSlice';
 import {useEffect, useRef} from "react";
 import { GrCart } from "react-icons/gr";
 import {formatterRub} from "../../utils/numberFormatter";
+import {RoutePath} from "../../config/router/routerConfig";
 
 export const Header = () => {
     const { items, totalPrice } = useSelector(selectCart);
@@ -26,7 +27,7 @@ export const Header = () => {
         <div className="header">
             <div className="container">
                 <div className="header__inner">
-                    <Link to="/" className="header__logo">
+                    <Link to={RoutePath.main} className="header__logo">
                         <img width="38" src={logo} alt="Pizza logo" />
                         <div>
                             <h1 className="header__title">Наручные часы</h1>
@@ -35,7 +36,7 @@ export const Header = () => {
                     </Link>
                     <div className="header__cart">
                         {location.pathname !== '/cart' && (
-                            <Link to="/cart" type="button" className="button button--cart">
+                            <Link to={RoutePath.cart} type="button" className="button button--cart">
                             <span>
                                 {formatterRub(totalPrice)}
                             </span>
