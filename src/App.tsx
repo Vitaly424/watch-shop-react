@@ -1,45 +1,23 @@
 import './scss/app.scss';
 
 import { Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
-import { Header } from './components/Header';
-import { lazy, Suspense } from "react";
-
-const NotFound = lazy(() => import('./pages/NotFound'));
-const FullWatch = lazy(() => import('./pages/FullWatch'));
-const Cart = lazy(() => import('./pages/Cart'));
+import { routeConfig, RoutePath } from "@/config/router/routerConfig";
+import { Layout } from "@/components/Layout";
 
 function App() {
-  return (
-      <div className="App">
-        <div>
-          <Header />
-
-          <div className="content">
-            <div className="container">
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/Cart" element={
-                  <Suspense fallback={<h2>Загрузка...</h2>}>
-                    <Cart />
-                  </Suspense>
-                } />
-                <Route path="/watch/:id" element={
-                  <Suspense fallback={<h2>Загрузка...</h2>}>
-                    <FullWatch />
-                  </Suspense>
-                } />
-                <Route path="*" element={
-                  <Suspense fallback={<h2>Загрузка...</h2>}>
-                     <NotFound />
-                  </Suspense>
-                } />
-              </Routes>
-            </div>
-          </div>
-        </div>
-      </div>
-  );
+    return (
+        <Routes>
+            <Route path={RoutePath.main} element={<Layout />}>
+                {Object.values(routeConfig).map(({ element, path }) => (
+                    <Route
+                        key={path}
+                        path={path}
+                        element={element}
+                    />
+                ))}
+            </Route>
+        </Routes>
+    );
 }
 
 export default App;

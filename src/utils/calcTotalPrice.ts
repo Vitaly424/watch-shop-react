@@ -1,5 +1,5 @@
-import { CartItem } from "../redux/slices/cartSlice";
+import { ICart } from "../redux/Cart";
 
-export const calcTotalPrice = (items: CartItem[]) => {
+export const calcTotalPrice = (items: ICart[]) => {
     return items.reduce((sum, obj) => (obj.price * obj.count) + sum, 0);
 }

@@ -1,12 +1,12 @@
 import { FC, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { addItem, CartItem, selectCartItemById } from '../../redux/slices/cartSlice';
-import { useAppDispatch } from "../../redux/store";
+import { cartAction, ICart, getCartByIdSelector } from '@/redux/Cart';
+import { useAppDispatch } from "@/redux/store";
 import style from './ProductCard.module.scss';
 import { GrCart } from "react-icons/gr";
-import { formatterRub } from "../../utils/numberFormatter";
-import {RoutePath} from "../../config/router/routerConfig";
+import { formatterRub } from "@/utils/numberFormatter";
+import { RoutePath } from "@/config/router/routerConfig";
 
 interface PizzaBlockProps {
     id: string;
@@ -22,11 +22,11 @@ export const WatchBlock: FC<PizzaBlockProps> = ({
     id, price, title, imageUrl,
 }) => {
     const dispatch = useAppDispatch();
-    const cartItem = useSelector(selectCartItemById(id));
+    const cartItem = useSelector(getCartByIdSelector(id));
     const addedCount = cartItem ? cartItem.count : 0;
 
     const onClickAdd = () => {
-        const item: CartItem = {
+        const item: ICart = {
             id,
             price,
             title,
@@ -34,15 +34,14 @@ export const WatchBlock: FC<PizzaBlockProps> = ({
             count: 0
         };
 
-        dispatch(addItem(item));
+        dispatch(cartAction.addItem(item));
     };
 
     return (
         <div className={style.productCard}>
             <div className={style.productCard__image}>
-                <Link to={`${RoutePath.full_watch}/${id}`} className={style.productCard__more}>Подробнее</Link>
-
-                <img src={imageUrl} alt="asdasd"/>
+                <Link to={`${RoutePath.full_watch}${id}`} className={style.productCard__more}>Подробнее</Link>
+                <img src={imageUrl} alt="Часы"/>
             </div>
             <div className={style.productCard__content}>
                 <h3 className={style.productCard__title}>{title}</h3>

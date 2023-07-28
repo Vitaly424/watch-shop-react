@@ -1,22 +1,21 @@
-import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { clearItems, selectCart } from '../redux/slices/cartSlice';
-import { CartEmpty } from '../components/CartEmpty';
+import { cartAction, getCartSelector } from '@/redux/Cart';
+import { CartEmpty } from '@/components/CartEmpty';
 import { FC } from "react";
-import { CartItemBlock } from "../components/CartItem/CartItemBlock";
-import { useAppDispatch } from "../redux/store";
-import { formatterRub } from "../utils/numberFormatter";
-import {useNavigate} from "react-router-dom";
-import {RoutePath} from "../config/router/routerConfig";
+import { CartItemBlock } from "@/components/CartItem/CartItemBlock";
+import { useAppDispatch } from "@/redux/store";
+import { RoutePath } from "@/config/router/routerConfig";
+import { formatterRub } from "@/utils/numberFormatter";
+import { useNavigate, Link } from "react-router-dom";
 
 const Cart: FC = () => {
     const dispatch = useAppDispatch();
-    const { totalPrice, items } = useSelector(selectCart);
+    const { totalPrice, items } = useSelector(getCartSelector);
     const totalCount = items.reduce((sum: number, item: any) => sum + item.count, 0);
     const navigate = useNavigate();
 
     const onClickClear = () => {
-        dispatch(clearItems());
+        dispatch(cartAction.clearItems());
         navigate('/')
     };
 

@@ -4,15 +4,71 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f296080b-30c9-45ef-ba72-73cafdbc6ec8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/config/router/routerConfig.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="cb0e9eb3-f4dc-46d3-aad0-dee4742404a1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitHub/workflows/main.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/craco.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Layout/Layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Layout/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Loader/Loader.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Loader/Loader.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Loader/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/consts/sortList.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/CartPage/CartPage.async.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/CartPage/CartPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/CartPage/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/FullWatchPage/FullWatchPage.async.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/FullWatchPage/FullWatchPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/FullWatchPage/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/HomePage/HomePage.async.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/HomePage/HomePage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/HomePage/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/NotFoundPage/NotFoundPage.async.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/NotFoundPage/NotFoundPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/NotFoundPage/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/Cart/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/Cart/selectors/getCartByIdSelector.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/Cart/selectors/getCartSelector.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/Cart/selectors/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/Cart/slice/cartSlice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/Cart/types/cart.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/Filter/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/Filter/selectors/getFilterSelector.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/Filter/selectors/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/Filter/slice/filterSlice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/Filter/types/filter.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/Watch/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/Watch/selectors/getWatchSelector.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/Watch/selectors/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/Watch/services/fetchWatch.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/Watch/slice/watchSlice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/Watch/types/watch.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/CartEmpty/CartEmpty.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CartEmpty/CartEmpty.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CartItem/CartItemBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CartItem/CartItemBlock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Categories/Categories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Categories/Categories.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Search/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/Search.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sort/Sort.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sort/Sort.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/WatchBlock/WatchBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WatchBlock/WatchBlock.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/router/routerConfig.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/router/routerConfig.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Cart.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/FullWatch.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/NotFound.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/react-app-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/react-app-env.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/slices/cartSlice.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/slices/filterSlice.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/slices/watchSlice.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/reportWebVitals.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/calcTotalPrice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/calcTotalPrice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/getCartFromLocalStorage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/getCartFromLocalStorage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,34 +78,41 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="2SU27gNlHK53FY4zl6Gv2QIfJ4A" />
+  <component name="ProjectId" id="2TAaAz8QAIIkR8UWLnJetCHiToB" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "D:\\Study\\React\\react-2023\\react-test-portfolio\\react-pizza-v2-new\\new-pizza\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\Study\\React\\react-2023\\react-test-portfolio\\react-pizza-v2-new\\new-pizza\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f296080b-30c9-45ef-ba72-73cafdbc6ec8" name="Changes" comment="" />
-      <created>1689186672619</created>
+      <changelist id="cb0e9eb3-f4dc-46d3-aad0-dee4742404a1" name="Changes" comment="" />
+      <created>1690488200827</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1689186672619</updated>
-      <workItem from="1689186684360" duration="1050000" />
+      <updated>1690488200827</updated>
+      <workItem from="1690488202322" duration="3071000" />
+      <workItem from="1690514604715" duration="3893000" />
+      <workItem from="1690518695172" duration="11461000" />
+      <workItem from="1690531750106" duration="1680000" />
     </task>
     <servers />
   </component>

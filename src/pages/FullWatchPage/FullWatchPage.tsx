@@ -1,7 +1,8 @@
 import { useNavigate, useParams } from 'react-router-dom';
-import {FC, useEffect, useState} from 'react';
+import { FC, useEffect, useState } from 'react';
 import axios from 'axios';
-import { formatterRub } from "../utils/numberFormatter";
+import { formatterRub } from "@/utils/numberFormatter";
+import { Loader } from "@/components/Loader";
 
 interface FullWatchState {
     title: string;
@@ -11,16 +12,16 @@ interface FullWatchState {
 }
 
 const FullWatch: FC = () => {
-    const [pizza, setPizza] = useState<FullWatchState>();
+    const [watch, setWatch] = useState<FullWatchState>();
     const { id } = useParams();
     const navigate = useNavigate();
 
     const fetchWatch = async () => {
         try {
             const { data } = await axios.get(`${process.env.REACT_APP_BASE_URL}/${id}`);
-            setPizza(data);
+            setWatch(data);
         } catch (err) {
-            alert('Произошла ошибка при получении пиццы!');
+            alert('Произошла ошибка при получении часов!');
             navigate('/');
         }
     };
@@ -29,9 +30,9 @@ const FullWatch: FC = () => {
         fetchWatch();
     }, []);
 
-    if (!pizza) {
+    if (!watch) {
         return (
-            <h2>Загрузка...</h2>
+            <Loader />
         );
     }
 
@@ -39,17 +40,17 @@ const FullWatch: FC = () => {
         <div className="container">
             <div className="full-watch">
                 <div className="full-watch__image">
-                    <img src={pizza.imageUrl} alt={pizza.title} />
+                    <img src={watch.imageUrl} alt={watch.title} />
                 </div>
                 <div className="full-watch__content">
-                    <h1 className="full-watch__title">{pizza.title}</h1>
+                    <h1 className="full-watch__title">{watch.title}</h1>
                     <p className="full-watch__price">
-                        Стоимость:  {formatterRub(pizza.price)}
+                        Стоимость:  {formatterRub(watch.price)}
                     </p>
                     <div className="full-watch__desc">
                         <h3>Описание</h3>
                         <p>
-                            {pizza.description}
+                            {watch.description}
                         </p>
                     </div>
 

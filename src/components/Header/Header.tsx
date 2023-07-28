@@ -1,15 +1,15 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import logo from '../../assets/img/logo.jpg';
+import logo from '@/assets/img/logo.jpg';
 import { Search } from '../Search';
-import { selectCart } from '../../redux/slices/cartSlice';
-import {useEffect, useRef} from "react";
+import { getCartSelector } from '@/redux/Cart';
+import { useEffect, useRef } from "react";
 import { GrCart } from "react-icons/gr";
-import {formatterRub} from "../../utils/numberFormatter";
-import {RoutePath} from "../../config/router/routerConfig";
+import { formatterRub } from "@/utils/numberFormatter";
+import { RoutePath } from "@/config/router/routerConfig";
 
 export const Header = () => {
-    const { items, totalPrice } = useSelector(selectCart);
+    const { items, totalPrice } = useSelector(getCartSelector);
     const totalCount = items.reduce((sum: number, item: any) => sum + item.count, 0);
     const location = useLocation();
     const isMounted = useRef(false);
@@ -37,9 +37,9 @@ export const Header = () => {
                     <div className="header__cart">
                         {location.pathname !== '/cart' && (
                             <Link to={RoutePath.cart} type="button" className="button button--cart">
-                            <span>
-                                {formatterRub(totalPrice)}
-                            </span>
+                                <span>
+                                    {formatterRub(totalPrice)}
+                                </span>
                                 <div className="button__delimiter" />
                                 <GrCart className="button--icon"/>
                                 <span>{totalCount}</span>

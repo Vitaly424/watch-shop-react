@@ -1,12 +1,10 @@
 import {
-    addItem, removeItem, minusItem, CartItem, selectCart,
-} from '../../redux/slices/cartSlice';
+    cartAction, ICart,
+} from '@/redux/Cart';
 import clsx from 'clsx';
-import {FC, useEffect} from "react";
-import { useAppDispatch } from "../../redux/store";
-import { formatterRub } from "../../utils/numberFormatter";
-import { useSelector } from "react-redux";
-import {useNavigate} from "react-router-dom";
+import { FC } from "react";
+import { useAppDispatch } from "@/redux/store";
+import { formatterRub } from "@/utils/numberFormatter";
 
 interface CartItemProps {
     id: string;
@@ -19,28 +17,25 @@ interface CartItemProps {
 }
 
 export const CartItemBlock: FC<CartItemProps> = (props) => {
-    const { items } = useSelector(selectCart)
-    const navigate = useNavigate();
     const {
         id, title, price, count, imageUrl
     } = props;
     const dispatch = useAppDispatch();
 
-
     const onClickPlus = () => {
         console.log('Test')
 
-        dispatch(addItem({
+        dispatch(cartAction.addItem({
             id,
-        } as CartItem));
+        } as ICart));
     };
 
     const onClickMinus = () => {
-        dispatch(minusItem(id));
+        dispatch(cartAction.minusItem({ id }));
     };
 
     const onClickRemoveItem = () => {
-        dispatch(removeItem(id));
+        dispatch(cartAction.removeItem({ id }));
     };
 
     return (
@@ -56,7 +51,7 @@ export const CartItemBlock: FC<CartItemProps> = (props) => {
                 </div>
             </div>
             <div className="cart__item-count">
-                <button disabled={count === 1} type="button" className={clsx('button button--outline button--circle cart__item-count-minus', {'button--disabled': count === 1})} onClick={onClickMinus}>
+                <button disabled={count === 1} type="button" className={clsx('button button--outline button--circle cart__item-count-minus', { 'button--disabled': count === 1 })} onClick={onClickMinus}>
                     <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M5.92001 3.84V5.76V8.64C5.92001 9.17016 5.49017 9.6 4.96001 9.6C4.42985 9.6 4.00001 9.17016 4.00001 8.64L4 5.76L4.00001 3.84V0.96C4.00001 0.42984 4.42985 0 4.96001 0C5.49017 0 5.92001 0.42984 5.92001 0.96V3.84Z"

@@ -1,27 +1,17 @@
-import { useEffect, useRef, useState} from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectFilter, setSortType, SortProperty } from '../../redux/slices/filterSlice';
-
-interface SortItem  {
-    name: string,
-    sortProperty: SortProperty;
-}
-
-export const sortList: SortItem[] = [
-    { name: 'популярности', sortProperty: SortProperty.RATING },
-    { name: 'цене', sortProperty: SortProperty.PRICE },
-    { name: 'алфавиту', sortProperty: SortProperty.TITLE },
-];
+import { filterAction, SortProperty, getFilterSelector, ISort } from '@/redux/Filter';
+import { sortList } from "@/consts/sortList";
 
 export const Sort = () => {
     const dispatch = useDispatch();
-    const { sortType } = useSelector(selectFilter);
+    const { sortType } = useSelector(getFilterSelector);
     const sortRef = useRef<HTMLDivElement>(null);
 
     const [open, setOpen] = useState(false);
 
-    const onClickListItem = (obj: SortItem) => {
-        dispatch(setSortType(obj));
+    const onClickListItem = (obj: ISort) => {
+        dispatch(filterAction.setSortType(obj));
         setOpen(false);
     };
 

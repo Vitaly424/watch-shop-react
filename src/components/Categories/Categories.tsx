@@ -1,26 +1,18 @@
 import { useDispatch, useSelector } from 'react-redux';
-import {selectFilter, setCategoryId} from '../../redux/slices/filterSlice';
+import { getFilterSelector, filterAction } from '@/redux/Filter';
 import { FC } from "react";
-
-export const categories: string[] = [
-    'Все',
-    'Российские часы',
-    'Эксклюзивные часы',
-    'Немецкие часы',
-    'Японские часы',
-    'Швейцарские часы',
-];
+import { categoriesList } from "@/consts/categories";
 
 export const Categories: FC = () => {
-    const { categoryId } = useSelector(selectFilter);
+    const { categoryId } = useSelector(getFilterSelector);
     const dispatch = useDispatch();
 
     return (
         <div className="categories">
             <ul className="categories__list">
-                {categories.map((categoryName, index) => (
+                {categoriesList.map((categoryName, index) => (
                     <li
-                        onClick={() => dispatch(setCategoryId(index))}
+                        onClick={() => dispatch(filterAction.setCategoryId({ id: index }))}
                         className={Number(categoryId) === index ? 'active' : ''}
                         key={categoryName}
                     >
